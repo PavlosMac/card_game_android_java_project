@@ -8,6 +8,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".Pontoon"
+            android:label="Pontoon">
+
+        </activity>
+
     </application>
 
 </manifest>
