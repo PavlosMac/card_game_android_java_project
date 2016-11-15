@@ -27,26 +27,22 @@ public class Pontoon extends AppCompatActivity {
 
         mPlayerNamesText  = (EditText)findViewById(R.id.player_text);
         mAddPlayers = (Button)findViewById(R.id.players_button);
-
+//
         mAddPlayers.setOnClickListener(new View.OnClickListener() {
-
+//
             @Override
             public void onClick(View view) {
-                Log.d("Pontoon", "button clicked");
-                String names = mPlayerNamesText.getText().toString();
-                Log.d("Pontoon", "Names were given" + names);
-
-//                String[] arr = names.split(" ");
-//
-//                Player player1 = names[0];
-//                Player player2 = names[1];
+                Log.d("Pontoon", "add player button clicked");
+                String playerNames = mPlayerNamesText.getText().toString();
+                Log.d("Pontoon", "These names were given" + playerNames);
 
                 Intent intent = new Intent(Pontoon.this, GameActivity.class);
 
-                intent.putExtra("names", names);
-
+                intent.putExtra("names", playerNames);
+//
                 startActivity(intent);
             }
+
         });
 
     }
