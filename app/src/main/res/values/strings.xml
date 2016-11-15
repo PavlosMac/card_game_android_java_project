@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CardGame</string>
+    <string name="add_player">Add Two PLayer Names</string>
+    <string name="press">Add</string>
+</resources>
