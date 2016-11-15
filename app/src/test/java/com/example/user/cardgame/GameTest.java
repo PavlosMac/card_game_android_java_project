@@ -30,9 +30,9 @@ public class GameTest{
         player3 = new Player("Henry Kissinger");
         game = new Game();
         deck = new Deck("pontoon deck");
-        game.addPlayers(player1);
-        game.addPlayers(player2);
-        game.addPlayers(player3);
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+        game.addPlayer(player3);
         game.deal(deck);
 
     }
@@ -74,7 +74,7 @@ public class GameTest{
         player1 = new Player("Linnea Lindblom");
         game = new Game();
         deck = new Deck("pontoon deck");
-        game.addPlayers(player1);
+        game.addPlayer(player1);
         card1 = new Card(4, SuitType.CLUBS);
         card2 = new RoyalCard(RoyalType.QUEEN, SuitType.CLUBS);
         player1.getHand(card1, card2);

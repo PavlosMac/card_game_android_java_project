@@ -20,7 +20,7 @@ public class Game{
     }
 
 
-    public void addPlayers(Player player){
+    public void addPlayer(Player player){
         players.add(player);
     }
 

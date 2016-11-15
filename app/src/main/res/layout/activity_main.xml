@@ -14,7 +14,7 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/players_button"
+        android:id="@+id/player_button"
         android:text="@string/press"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="40dp"
