@@ -60,7 +60,7 @@ public class Game{
     public String showAllHandsProperly(){
         String allHands = "";
         for (Player player : players){
-            allHands += (player.getName() + " : " + player.showHand() + "\n");
+            allHands += (player.showHand() + "\n");
         }
         return allHands;
     }
@@ -85,8 +85,8 @@ public class Game{
     public String fullPlayAsString(){
 
         String playerHands = showAllHandsProperly();
-        String winningPlayer = winChecker().getName();
-        String result = String.format("%s but the winner is %s", playerHands, winningPlayer);
+        String winningPlayer = winChecker().getName().toUpperCase();
+        String result = String.format("%s %n but the winner is %s!!", playerHands, winningPlayer);
         return result;
     }
 

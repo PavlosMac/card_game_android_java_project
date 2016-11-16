@@ -5,16 +5,14 @@
 
     <TextView
         android:id="@+id/player_names"
-        android:textSize="20dp"
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        style="@style/MyTextViewStyle"
+        android:text=""/>
+
     <TextView
         android:id="@+id/game_play"
+        style="@style/MyTextViewStyle"
         android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="casual" />
+        />
 
     <Button
         android:id="@+id/play"

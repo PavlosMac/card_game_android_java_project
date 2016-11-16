@@ -37,7 +37,7 @@ package com.example.user.cardgame;
 
                 String playerNames = extras.getString("names");
 
-//
+                //
                 mPlayers.setText(playerNames);
 
                 String names = getIntent().getExtras().getString("names");

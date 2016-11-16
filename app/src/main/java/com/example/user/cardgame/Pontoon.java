@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 /**
  * Created by user on 15/11/2016.
@@ -24,6 +25,12 @@ public class Pontoon extends AppCompatActivity {
         Log.d("Pontoon", "onCreate called");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final ImageView imageView = new ImageView(this);
+
+        imageView.setImageResource(R.drawable.pontoon_card);
+
+        setContentView(imageView);
 
         mPlayerNamesText  = (EditText)findViewById(R.id.player_text);
         mAddPlayers = (Button)findViewById(R.id.player_button);
