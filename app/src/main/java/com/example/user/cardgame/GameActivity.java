@@ -18,60 +18,65 @@ package com.example.user.cardgame;
             TextView mGamePlay;
             Button mPlay;
 
+            Game game;
+            Deck deck;
+
             @Override
-            protected void onCreate(Bundle savedInstanceState){
+            protected void onCreate(Bundle savedInstanceState) {
                 Log.d("Pontoon", "GameActivity onCreate called");
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_game);
 
-                mPlayers = (TextView)findViewById(R.id.player_names);
+                mPlayers = (TextView) findViewById(R.id.player_names);
 //
 //
                 Intent intent = getIntent();
 
                 Bundle extras = intent.getExtras();
-                String names = extras.getString("names");
+
+                String playerNames = extras.getString("names");
+
 //
-//
-//
-//
-        mPlayers.setText(names);
+                mPlayers.setText(playerNames);
 
-        mGamePlay = (TextView)findViewById(R.id.game_play);
-
-        mPlay = (Button)findViewById(R.id.play);
-
-
-        mPlay.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Log.d("GameActivity", "Play button clicked");
-
-                Intent intent = getIntent();
-
-                Bundle extras = intent.getExtras();
-
-                String names = extras.getString("names");
-
+                String names = getIntent().getExtras().getString("names");
                 String[] arr = names.split(" ");
 
-                String player1 = arr[0];
-                String player2 = arr[1];
+                Player player1 = new Player(arr[0]);
+                Player player2 = new Player(arr[1]);
 
-                Game game = new Game();
+                game = new Game();
                 game.addPlayer(player1);
                 game.addPlayer(player2);
-                Deck deck = new Deck("Pontoon");
-                game.deal(deck);
+//
 
-                String result = game.gamePlayAsString();
-                mGamePlay.setText(result);
+
+                deck = new Deck("Pontoon");
+//
+
+
+                mGamePlay = (TextView) findViewById(R.id.game_play);
+
+                mPlay = (Button) findViewById(R.id.play);
+
+
+                mPlay.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Log.d("GameActivity", "Play button clicked");
+
+
+                        game.deal(deck);
+
+                        String result = game.gamePlayAsString();
+
+                        mGamePlay.setText(result);
+
+                    }
+                });
+
 
             }
-        });
 
 
-    }
-
-
-//}
+}
