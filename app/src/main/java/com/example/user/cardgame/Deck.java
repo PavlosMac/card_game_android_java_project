@@ -52,7 +52,7 @@ public class Deck {
     }
 
     public void populateNumerals(){
-        for (int i = 1; i < 10; i++){
+        for (int i = 2; i < 11; i++){
             for(SuitType suit : SuitType.values()){
                 addCardtoDeck(new Card(i, suit));
             }

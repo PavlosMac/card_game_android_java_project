@@ -88,8 +88,14 @@ public class GameTest{
     public void testDealFromSameDeck(){
         game.reDeal(deck);
         assertEquals(46, deck.count());
+
     }
 
+    @Test
+    public void testFullPlayerAsString(){
+        String result = game.fullPlayAsString();
+        assertTrue(result instanceof String);
+    }
 
 
 

@@ -68,12 +68,14 @@ package com.example.user.cardgame;
 
                         game.deal(deck);
 
-                        String result = game.gamePlayAsString();
+                        String result = game.fullPlayAsString();
 
                         mGamePlay.setText(result);
 
                     }
                 });
+
+                    mReplay = (Button) findViewById(R.id.re_play);
 
                 mReplay.setOnClickListener(new View.OnClickListener(){
                     @Override
@@ -81,9 +83,13 @@ package com.example.user.cardgame;
 
                         Log.d("GameActivity", "Replay button clicked");
 
-                        String result =  game.reDeal(deck);
+                        game.reDeal(deck);
 
-                        mGamePlay.setText(result);
+                        String results = game.fullPlayAsString();
+
+                        mGamePlay.setText("");
+
+                        mGamePlay.setText(results);
 
 
                     }

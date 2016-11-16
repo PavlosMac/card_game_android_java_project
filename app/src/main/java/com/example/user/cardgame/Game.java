@@ -81,7 +81,7 @@ public class Game{
         return null;
     }
 
-    public String gamePlayAsString(){
+    public String fullPlayAsString(){
 
         String playerHands = showAllHandsProperly();
         String winningPlayer = winChecker().getName();
