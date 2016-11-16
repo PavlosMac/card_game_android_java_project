@@ -86,7 +86,7 @@ public class Game{
 
         String playerHands = showAllHandsProperly();
         String winningPlayer = winChecker().getName().toUpperCase();
-        String result = String.format("%s %n but the winner is %s!!", playerHands, winningPlayer);
+        String result = String.format("%s %n The winner is %s!!", playerHands, winningPlayer);
         return result;
     }
 

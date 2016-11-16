@@ -8,23 +8,24 @@
     <EditText
         android:id="@+id/player_text"
         android:hint="@string/add_player"
-        android:textSize="40dp"
-        android:layout_marginTop="60dp"
+        android:textSize="30dp"
+        android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/player_button"
         android:text="@string/press"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <ImageView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/pontoon_card" />
+
 
 
 </LinearLayout>

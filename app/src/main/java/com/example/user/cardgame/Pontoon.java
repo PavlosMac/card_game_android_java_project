@@ -20,19 +20,16 @@ public class Pontoon extends AppCompatActivity {
     Button mAddPlayers;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         Log.d("Pontoon", "onCreate called");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final ImageView imageView = new ImageView(this);
-
-        imageView.setImageResource(R.drawable.pontoon_card);
-
-        setContentView(imageView);
 
         mPlayerNamesText  = (EditText)findViewById(R.id.player_text);
+
         mAddPlayers = (Button)findViewById(R.id.player_button);
 
         mAddPlayers.setOnClickListener(new View.OnClickListener() {
