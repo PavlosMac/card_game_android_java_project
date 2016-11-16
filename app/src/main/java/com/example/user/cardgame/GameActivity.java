@@ -17,6 +17,7 @@ package com.example.user.cardgame;
             TextView mPlayers;
             TextView mGamePlay;
             Button mPlay;
+            Button mReplay;
 
             Game game;
             Deck deck;
@@ -65,7 +66,6 @@ package com.example.user.cardgame;
                     public void onClick(View view) {
                         Log.d("GameActivity", "Play button clicked");
 
-
                         game.deal(deck);
 
                         String result = game.gamePlayAsString();
@@ -73,6 +73,21 @@ package com.example.user.cardgame;
                         mGamePlay.setText(result);
 
                     }
+                });
+
+                mReplay.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View view){
+
+                        Log.d("GameActivity", "Replay button clicked");
+
+                        String result =  game.reDeal(deck);
+
+                        mGamePlay.setText(result);
+
+
+                    }
+
                 });
 
 
