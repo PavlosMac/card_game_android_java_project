@@ -74,12 +74,13 @@ public class Game{
 
             if (player.getOverallHandValue() > winningPlayer.getOverallHandValue()){
                 winningPlayer = player;
-
             }
-            return winningPlayer;
+
         }
-        return null;
+        return winningPlayer;
     }
+
+
 
     public String fullPlayAsString(){
 

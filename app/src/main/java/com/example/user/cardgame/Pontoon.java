@@ -27,7 +27,7 @@ public class Pontoon extends AppCompatActivity {
 
         mPlayerNamesText  = (EditText)findViewById(R.id.player_text);
         mAddPlayers = (Button)findViewById(R.id.player_button);
-//
+
         mAddPlayers.setOnClickListener(new View.OnClickListener() {
 
             @Override

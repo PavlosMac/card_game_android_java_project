@@ -45,10 +45,12 @@ package com.example.user.cardgame;
 
                 Player player1 = new Player(arr[0]);
                 Player player2 = new Player(arr[1]);
+                Player player3 = new Player(arr[2]);
 
                 game = new Game();
                 game.addPlayer(player1);
                 game.addPlayer(player2);
+                game.addPlayer(player3);
 //
 
 

@@ -15,6 +15,10 @@ public class GameTest{
 
     Deckable card1;
     Deckable card2;
+    Deckable card3;
+    Deckable card4;
+    Deckable card5;
+    Deckable card6;
     Game game;
     Deck deck;
     Player player1;
@@ -82,6 +86,28 @@ public class GameTest{
         assertEquals("Linnea Lindblom has 4 of clubs, queen of clubs, worth 14", results);
     }
 
+    @Test
+    public void testGameCanActuallyTestWinChecker(){
+
+        card1 = new Card(4, SuitType.CLUBS);
+        card2 = new RoyalCard(RoyalType.KING, SuitType.HEARTS);
+        card3 = new Card(5, SuitType.SPADES);
+        card4 = new RoyalCard(RoyalType.JACK, SuitType.DIAMONDS);
+        card5 = new Card(6, SuitType.HEARTS);
+        card6 = new Card(2, SuitType.CLUBS);
+        player1 = new Player("Linnea Lindblom");
+        player2 = new Player("Pavlos Macdonald");
+        player3 = new Player("Henry Kissinger");
+        game.addPlayer(player3);
+        game.addPlayer(player1);
+        game.addPlayer(player2);
+
+        player1.getHand(card1,card2);
+        player2.getHand(card3,card4);
+        player3.getHand(card5,card6);
+        Player player = game.winChecker();
+        assertEquals("Pavlos Macdonald", player.getName());
+    }
 
 
     @Test
