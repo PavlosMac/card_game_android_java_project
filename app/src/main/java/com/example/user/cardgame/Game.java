@@ -60,7 +60,7 @@ public class Game{
     public String showAllHandsProperly(){
         String allHands = "";
         for (Player player : players){
-            allHands += (player.showHand() + "\n");
+            allHands += (player.showHand() + "\n\n");
         }
         return allHands;
     }

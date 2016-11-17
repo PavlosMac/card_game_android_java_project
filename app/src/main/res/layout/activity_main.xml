@@ -17,8 +17,9 @@
     <Button
         android:id="@+id/player_button"
         android:text="@string/press"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
